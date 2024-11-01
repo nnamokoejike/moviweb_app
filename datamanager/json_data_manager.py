@@ -3,7 +3,7 @@ from moviweb_app.datamanager.data_manager_interface import DataManagerInterface
 
 
 class JSONDataManager(DataManagerInterface):
-    def __init__(self, filename='users.json'):
+    def __init__(self, filename):
         self.filename = filename
         self.data = self.load_data()
 
