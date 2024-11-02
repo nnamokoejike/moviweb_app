@@ -5,8 +5,8 @@
             "1": {
                 "name": "Inception",
                 "director": "Christopher Nolan",
-                "year": 2010,
-                "rating": 8.8
+                "year": "2010",
+                "rating": "8.9"
             },
             "2": {
                 "name": "The Dark Knight",
@@ -14,16 +14,56 @@
                 "year": 2008,
                 "rating": 9.0
             },
-            "3": {
-                "name": null,
+            "8": {
+                "name": "The Room",
+                "director": "Tommy Wiseau",
+                "year": "2003",
+                "rating": "3.6"
+            },
+            "4": {
+                "name": "Titanic",
                 "director": "James Cameron",
-                "year": "N/A",
-                "rating": "N/A"
+                "year": "1997",
+                "rating": "7.9"
             }
         }
     },
     "2": {
         "name": "Bob",
+        "movies": {
+            "1": {
+                "name": "Inception2",
+                "director": "Christopher Nolan2",
+                "year": 2011,
+                "rating": 8.9
+            },
+            "2": {
+                "name": "The Dark Knight2",
+                "director": "Christopher Nolan2",
+                "year": 2009,
+                "rating": 9.1
+            }
+        }
+    },
+    "3": {
+        "name": "Vincent",
+        "movies": {
+            "1": {
+                "name": "Inception3",
+                "director": "Christopher Nolan3",
+                "year": 2021,
+                "rating": 7.9
+            },
+            "2": {
+                "name": "The Dark Knight3",
+                "director": "Christopher Nolan3",
+                "year": 2016,
+                "rating": 8.5
+            }
+        }
+    },
+    "4": {
+        "name": "Onyinyechi",
         "movies": {}
     }
 }

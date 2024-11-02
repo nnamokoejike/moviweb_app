@@ -13,6 +13,10 @@ class JSONDataManager(DataManagerInterface):
             with open(self.filename, 'r') as file:
                 return json.load(file)
         except FileNotFoundError:
+            print(f"File {self.filename} not found. Starting with an empty data structure.")
+            return {}
+        except json.JSONDecodeError:
+            print(f"Error decoding JSON from {self.filename}. File may be corrupted.")
             return {}
 
     def save_data(self):
