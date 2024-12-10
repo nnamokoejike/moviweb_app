@@ -14,17 +14,17 @@
                 "year": 2008,
                 "rating": 9.0
             },
-            "8": {
-                "name": "The Room",
-                "director": "Tommy Wiseau",
-                "year": "2003",
-                "rating": "3.6"
-            },
             "4": {
                 "name": "Titanic",
                 "director": "James Cameron",
                 "year": "1997",
                 "rating": "7.9"
+            },
+            "5": {
+                "name": "Iheanacho",
+                "director": "Nwachukwu",
+                "year": 2016,
+                "rating": 8.9
             }
         }
     },
@@ -55,15 +55,55 @@
                 "rating": 7.9
             },
             "2": {
-                "name": "The Dark Knight3",
-                "director": "Christopher Nolan3",
-                "year": 2016,
-                "rating": 8.5
+                "name": "Inception7",
+                "director": "Christopher Nolan7",
+                "year": 2024,
+                "rating": 9.6
             }
         }
     },
     "4": {
         "name": "Onyinyechi",
-        "movies": {}
+        "movies": {
+            "1": {
+                "name": "Inception7",
+                "director": "Christopher Nolan7",
+                "year": 2024,
+                "rating": 9.6
+            }
+        }
+    },
+    "5": {
+        "name": "Great",
+        "movies": {
+            "1": {
+                "name": "Inception7",
+                "director": "Christopher Nolan7",
+                "year": 2024,
+                "rating": 9.6
+            }
+        }
+    },
+    "6": {
+        "name": "Princess",
+        "movies": {
+            "1": {
+                "name": "Inception7",
+                "director": "Christopher Nolan7",
+                "year": 2024,
+                "rating": 9.6
+            }
+        }
+    },
+    "7": {
+        "name": "Daniel",
+        "movies": {
+            "1": {
+                "name": "Inception7",
+                "director": "Christopher Nolan7",
+                "year": 2024,
+                "rating": 9.6
+            }
+        }
     }
 }

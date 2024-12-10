@@ -3,19 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.9">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
     <title>{{ user_id }}'s Movies - MovieWeb App</title>
 </head>
 <body>
-  <h1>{{ user_id }}'s Favourite Movies</h1>
-<ul>
-  {% for movie_id, movie in movies.items() %}
-    <li>
-        <strong>{{ movie.name }}</strong> ({{ movie.year }}) - Directed by {{ movie.director }}, Rated: {{ movie.rating }}
-        <a href="{{ url_for('update_movie', user_id=user_id, movie_id=movie_id) }}">Edit</a>
-        <a href="{{ url_for('delete_movie', user_id=user_id, movie_id=movie_id) }}">Delete</a>
-    </li>
-    {% endfor %}
-</ul>
+    <div class="container my-5">
+        <h1 class="text-center">{{ user_name }}'s Favourite Movies</h1>
+        <div class="row">
+            {% for movie_id, movie in movies.items() %}
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ movie.name }}</h5>
+                        <p>Director: {{ movie.director }}</p>
+                        <p>Year: {{ movie.year }}</p>
+                        <p>Rating: {{ movie.rating }}</p>
+                        <a href="{{ url_for('update_movie', user_id=user_id, movie_id=movie_id) }}" class="btn-warning">Edit</a>
+                        <a href="{{ url_for('delete_movie', user_id=user_id, movie_id=movie_id) }}" class="btn btn-danger">Delete</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 </body>
 </html>

@@ -3,17 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
     <title>Users - MovieWeb App</title>
 </head>
 <body>
-    <h1>Users</h1>
-    <ul>
-        {% for user_id, user_data in users.items() %}
-            <li>
-                <a href="{{ url_for('user_movies', user_id=user_id) }}">{{ user_data.name }}</a>
-            </li>
-        {% endfor %}
-    </ul>
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Users</h1>
+        <div class="row">
+            {% for user_id, user_data in users.items() %}
+                <div class="col-md-4">
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ user_data.name }}</h5>
+                            <a href="{{ url_for('user_movies', user_id=user_id) }}" class="btn-primary">View Movies</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 </body>
 </html>

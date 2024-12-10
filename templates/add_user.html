@@ -3,19 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
     <title>Add User - MovieWeb App</title>
 </head>
 <body>
-    <h1>Add a new User</h1>
-    <form action="{{ url_for('add_user') }}" method="POST">
-        <label for="user_id">User ID:</label>
-        <input type="text" id="user_id" name="user_id" required><br>
-
-        <label for="user_name">Name:</label>
-        <input type="text" id="user_name" name="user_name" required><br>
-        <button type="submit">Add User</button>
-    </form>
-    <a href="{{ url_for('list_users') }}">Back to Users List</a>
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card-shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Add a New User</h3>
+                        <form action="{{url_for('add_user')}}" method="POST">
+                            <div class="form-group">
+                                <label for="user_name">Name</label>
+                                <input type="text" class="form-control" id="user_name" name="user_name" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Add User</button>
+                        </form>
+                        <a href="{{url_for('list_users') }}" class="btn btn-link btn-block">Back to Users List</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

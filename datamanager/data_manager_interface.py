@@ -14,7 +14,7 @@ class DataManagerInterface(ABC):
         pass
 
     @abstractmethod
-    def add_user(self, user_id, user_data):
+    def add_user(self, user_data):
         """Add a new user."""
         pass
 
