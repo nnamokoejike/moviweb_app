@@ -11,11 +11,11 @@
             font-family: 'Roboto', sans-serif;
         }
     </style>
-    <title>{{ user_id }}'s Movies - MovieWeb App</title>
+    <title>{{ user['name'] }}'s Movies - MovieWeb App</title>
 </head>
 <body>
     <div class="container my-5">
-        <h1 class="text-center">{{ user_name }}'s Favourite Movies</h1>
+        <h1 class="text-center">{{ user['name'] }}'s Favourite Movies</h1>
         <div class="row">
             {% for movie_id, movie in movies.items() %}
             <div class="col-md-4">

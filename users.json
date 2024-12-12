@@ -19,12 +19,6 @@
                 "director": "James Cameron",
                 "year": "1997",
                 "rating": "7.9"
-            },
-            "5": {
-                "name": "Iheanacho",
-                "director": "Nwachukwu",
-                "year": 2016,
-                "rating": 8.9
             }
         }
     },
@@ -86,14 +80,7 @@
     },
     "6": {
         "name": "Princess",
-        "movies": {
-            "1": {
-                "name": "Inception7",
-                "director": "Christopher Nolan7",
-                "year": 2024,
-                "rating": 9.6
-            }
-        }
+        "movies": {}
     },
     "7": {
         "name": "Daniel",
@@ -105,5 +92,13 @@
                 "rating": 9.6
             }
         }
+    },
+    "8": {
+        "name": "Abro",
+        "movies": {}
+    },
+    "9": {
+        "name": "1234",
+        "movies": {}
     }
 }
