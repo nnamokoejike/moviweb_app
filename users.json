@@ -2,68 +2,92 @@
     "1": {
         "name": "Alice",
         "movies": {
-            "1": {
+            "2": {
+                "name": "The Room",
+                "director": "Tommy Wiseau",
+                "year": 2003,
+                "rating": 3.6
+            },
+            "5": {
                 "name": "Inception",
                 "director": "Christopher Nolan",
-                "year": "2010",
-                "rating": "8.9"
+                "year": 2025,
+                "rating": 8.8
             },
-            "2": {
-                "name": "The Dark Knight",
-                "director": "Christopher Nolan",
-                "year": 2008,
-                "rating": 9.0
+            "6": {
+                "name": "The Lion King",
+                "director": "Roger Allers, Rob Minkoff",
+                "year": 1994,
+                "rating": 8.5
             },
-            "4": {
+            "7": {
                 "name": "Titanic",
                 "director": "James Cameron",
-                "year": "1997",
-                "rating": "7.9"
+                "year": 1997,
+                "rating": 7.9
             }
         }
     },
     "2": {
         "name": "Bob",
         "movies": {
-            "1": {
-                "name": "Inception2",
-                "director": "Christopher Nolan2",
-                "year": 2011,
-                "rating": 8.9
+            "3": {
+                "name": "Titanic",
+                "director": "James Cameron",
+                "year": 1997,
+                "rating": 7.9
             },
             "2": {
-                "name": "The Dark Knight2",
-                "director": "Christopher Nolan2",
+                "name": "The Room",
+                "director": "Tommy Wiseau",
                 "year": 2009,
-                "rating": 9.1
+                "rating": 7.9
+            },
+            "4": {
+                "name": "The Lion King",
+                "director": "Roger Allers, Rob Minkoff",
+                "year": 1994,
+                "rating": 8.5
             }
         }
     },
     "3": {
         "name": "Vincent",
         "movies": {
-            "1": {
-                "name": "Inception3",
-                "director": "Christopher Nolan3",
-                "year": 2021,
+            "3": {
+                "name": "Titanic",
+                "director": "James Cameron",
+                "year": 1997,
                 "rating": 7.9
             },
             "2": {
-                "name": "Inception7",
-                "director": "Christopher Nolan7",
-                "year": 2024,
-                "rating": 9.6
+                "name": "The Room",
+                "director": "Tommy Wiseau",
+                "year": 2003,
+                "rating": 3.6
+            },
+            "4": {
+                "name": "The Lion King",
+                "director": "Roger Allers, Rob Minkoff",
+                "year": 1994,
+                "rating": 8.5
             }
         }
     },
     "4": {
         "name": "Onyinyechi",
         "movies": {
-            "1": {
-                "name": "Inception7",
-                "director": "Christopher Nolan7",
-                "year": 2024,
-                "rating": 9.6
+            "4": {
+                "name": "The Room",
+                "director": "Tommy Wiseau",
+                "year": 2003,
+                "rating": 3.6
+            },
+            "5": {
+                "name": "Titanic",
+                "director": "James Cameron",
+                "year": 1997,
+                "rating": 7.9
             }
         }
     },
@@ -71,34 +95,97 @@
         "name": "Great",
         "movies": {
             "1": {
-                "name": "Inception7",
-                "director": "Christopher Nolan7",
-                "year": 2024,
-                "rating": 9.6
+                "name": "Titanic",
+                "director": "James Cameron",
+                "year": 1997,
+                "rating": 7.9
+            },
+            "2": {
+                "name": "The Room",
+                "director": "Tommy Wiseau",
+                "year": 2003,
+                "rating": 3.6
+            },
+            "3": {
+                "name": "The Lion King",
+                "director": "Roger Allers, Rob Minkoff",
+                "year": 1994,
+                "rating": 8.5
             }
         }
     },
     "6": {
         "name": "Princess",
-        "movies": {}
+        "movies": {
+            "1": {
+                "name": "Titanic",
+                "director": "James Cameron",
+                "year": 1997,
+                "rating": 7.9
+            },
+            "2": {
+                "name": "The Room",
+                "director": "Tommy Wiseau",
+                "year": 2003,
+                "rating": 3.6
+            }
+        }
     },
     "7": {
         "name": "Daniel",
         "movies": {
             "1": {
-                "name": "Inception7",
-                "director": "Christopher Nolan7",
-                "year": 2024,
-                "rating": 9.6
+                "name": "The Room",
+                "director": "Tommy Wiseau",
+                "year": 2003,
+                "rating": 3.6
+            },
+            "2": {
+                "name": "Titanic",
+                "director": "James Cameron",
+                "year": 1997,
+                "rating": 7.9
             }
         }
     },
     "8": {
         "name": "Abro",
-        "movies": {}
+        "movies": {
+            "1": {
+                "name": "Titanic",
+                "director": "James Cameron",
+                "year": 1997,
+                "rating": 7.9
+            },
+            "2": {
+                "name": "The Room",
+                "director": "Tommy Wiseau",
+                "year": 2006,
+                "rating": 7.5
+            },
+            "3": {
+                "name": "The Lion King",
+                "director": "Roger Allers, Rob Minkoff",
+                "year": 1994,
+                "rating": 8.5
+            }
+        }
     },
     "9": {
         "name": "1234",
-        "movies": {}
+        "movies": {
+            "1": {
+                "name": "Titanic",
+                "director": "James Cameron",
+                "year": 1997,
+                "rating": 7.9
+            },
+            "2": {
+                "name": "The Room",
+                "director": "Tommy Wiseau",
+                "year": 2003,
+                "rating": 3.6
+            }
+        }
     }
 }

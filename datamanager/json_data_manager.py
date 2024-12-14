@@ -130,15 +130,16 @@ class JSONDataManager(DataManagerInterface):
             issues = ', '.join([f"{field}: {error}" for field, error in incorrect_fields.items()])
             return f"Movie data has invalid fields.issues: {issues}"
 
-        # Add the movie
+        # Check if the movie already exists
         movies = user.get("movies", {})
         for movie_id, movie in movies.items():
             if movie["name"].lower() == movie_data["name"].lower():
                 return f"Movie '{movie_data['name']}' already exists in {user['name']}'s movie list."
 
-        # Add the movie
-        movie_id = str(len(movies) + 1)  # Generate a unique movie ID
+        # Generate a unique movie ID
+        movie_id = str(max(map(int, movies.keys()), default=0) + 1)      # Use max existing ID # 1 or start from 1
         movies[movie_id] = movie_data
+
         self._save_data()
         return f"Movie '{movie_data['name']}' added successfully to user ID {user_id}."
 
@@ -166,38 +167,20 @@ class JSONDataManager(DataManagerInterface):
         # retrieve the current movie data
         current_movie_data = movies[movie_id_str]
 
-        # Check if updated_data matches current data
-        if updated_data == current_movie_data:
-            return "No new data provided for update. The movie data remains unchanged."
+        # Convert and validate updated_data fields
+        try:
+            updated_data['year'] = int(updated_data['year']) if updated_data['year'] else current_movie_data['year']
+            updated_data['rating'] = float(updated_data['rating']) if updated_data['rating'] else current_movie_data['rating']
+        except ValueError as e:
+            return f"Invalid data format: {e}"
 
-        # Validate updated_data for required fields and formats
-        required_fields = {
-            "name": str,
-            "director": str,
-            "year": int,
-            "rating": float
-        }
-        missing_fields = []
-        incorrect_fields = {}
-
-        for field, expected_type in required_fields.items():
-            if field not in updated_data or not updated_data[field]:
-                missing_fields.append(field)
-            elif not isinstance(updated_data[field], expected_type):
-                incorrect_fields[field] = f"Expected {expected_type.__name__}, got {type(updated_data[field]).__name__}"
-            elif field == "year" and (updated_data["year"] < 1000 or updated_data["year"] > 9999):
-                incorrect_fields["year"] = "Year must be a 4-digit integer."
-
-        if missing_fields:
-            return f"Updated movie data is incomplete. Missing fields: {', '.join(missing_fields)}"
-        if incorrect_fields:
-            issues = ', '.join([f"{field}: {error}" for field, error in incorrect_fields.items()])
-            return f"Updated movie data has invalid fields. Issues: {issues}"
-
-        # Check for duplicate movie names within the user's list (excluding the current movie being updated)
-        for mid, movie in movies.items():
-            if mid != movie_id_str and movie["name"].lower() == updated_data["name"].lower():
-                return f"Movie '{updated_data['name']}' already exists in {user['name']}'s movie list."
+        # Update the movie only if there are changes
+        if current_movie_data != updated_data:
+            movies[movie_id_str].update(updated_data)
+            self._save_data()
+            return f"Movie ID {movie_id} updated successfully for user ID {user_id}."
+        else:
+            return "No changes detected. The movie data remains unchanged."
 
         # Update the movie
         movies[movie_id_str].update(updated_data)
