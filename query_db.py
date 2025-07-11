@@ -5,8 +5,9 @@ def query_database():
     with app.app_context():
         print("\n ---Verification ---")
         print("All Users:")
-        print(User.query.all())
-        for user in User.query.all():
+        users = User.query.all()
+        print(users)
+        for user in users:
             print(f" {user.username} (ID: {user.user_id})")
             # for movie in user.favorite_movies:
             #     print(f"    -{movie.title}")
